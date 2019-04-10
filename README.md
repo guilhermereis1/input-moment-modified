@@ -25,19 +25,11 @@ designed to stretch to their parent container element. The parent wrapper must h
 If you want to override the default colors and use your own color scheme, see the scss in [this file](https://github.com/wayofthefuture/react-input-moment/blob/master/example/colors.scss).
 
 ``` javascript
-import {InputMoment, BigInputMoment, DatePicker, TimePicker} from 'react-input-moment';
+import { BigInputMoment } from 'react-input-moment';
 
 //all wrapper classes should have a set width and height.
 //percentages will work as long as the parent of the wrapper has a set width and height.
 
-<div className="wrapper">
-  <InputMoment
-    moment={this.state.moment}
-    onChange={this.handleChange}
-    showSeconds={true}
-    locale="en"
-  />
-</div>
 
 <div className="wrapper">
   <BigInputMoment
@@ -47,31 +39,6 @@ import {InputMoment, BigInputMoment, DatePicker, TimePicker} from 'react-input-m
   />
 </div>
 
-<div className="wrapper">
-  <DatePicker
-    moment={this.state.moment}
-    onChange={this.handleChange}
-    locale="en"
-  />
-</div>
-
-//onChange(startMoment, endMoment)
-<div className="wrapper">
-  <DatePickerRange
-    startMoment={this.state.startMoment}
-    endMoment={this.state.endMoment}
-    onChange={this.handleChange}
-  />
-</div>
-
-<div className="wrapper">
-  <TimePicker
-    moment={this.state.moment}
-    onChange={this.handleChange}
-    showSeconds={true}
-    locale="en"
-  />
-</div>
 ```
 
 Check [app.js](https://github.com/wayofthefuture/react-input-moment/blob/master/example/app.js)
