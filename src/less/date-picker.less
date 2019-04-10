@@ -1,0 +1,78 @@
+@import 'variables';
+
+.im-date-picker {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  .toolbar {
+    height: @toolbar-height;
+    line-height: 30px;
+    color: @color-blue;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+
+    .current-date {
+      display: inline-block;
+      width: 68%;
+      min-width: 200px;
+      cursor: pointer;
+      font-size: 26px;
+      line-height: 40px;
+      vertical-align: middle;
+      text-decoration: underline;
+    }
+
+    //arrows
+    .prev-nav, .next-nav {
+      display: inline-block;
+      width: 8%;
+      cursor: pointer;
+      font-size: 40px;
+      vertical-align: middle;
+    }
+  }
+
+  //days on calendar not within current month
+  .prev-month, .next-month, .prev-year, .next-year {
+    color: rgba(50,50,50,0.2);
+  }
+
+  table {
+    width: 100%;
+    height: calc(100% ~"-" @toolbar-height);
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+  }
+
+  td {
+    text-align: center;
+    cursor: pointer;
+    color: @color-gray;
+    border: 1px solid @color-gray;
+    font-size: 20px;
+
+    &.current {
+      background-color: @color-blue;
+      color: @color-white;
+      font-weight: bold;
+    }
+  }
+
+  thead {
+    td {
+      color: @color-blue;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+
+  tbody {
+    td {
+      color: #666666;
+    }
+  }
+}

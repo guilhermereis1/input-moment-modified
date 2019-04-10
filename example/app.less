@@ -1,0 +1,61 @@
+@import '../src/less/variables';
+
+body {
+  margin: 0;
+  font: 87.5%/1.5em 'Lato', sans-serif;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+
+  .header {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .options {
+    text-align: center;
+  }
+
+  input.header-button {
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    font-size: 20px;
+    background: none;
+    border: 2px solid @color-blue;
+    color: @color-blue;
+    cursor: pointer;
+  }
+
+  input.output {
+    padding: 7px 8px;
+    font-size: 20px;
+    width: 275px;
+    margin-bottom: 1em;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+
+    &.small {
+      height: 380px;
+      width: 320px;   /* small phone typical size */
+    }
+    &.medium {
+      height: 400px;
+      width: 500px;
+    }
+    &.large {
+      height: 600px;
+      width: 700px;
+    }
+  }
+}
